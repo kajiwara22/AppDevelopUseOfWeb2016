@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/AppDevelopUseOfWeb2016.iml" filepath="$PROJECT_DIR$/.idea/AppDevelopUseOfWeb2016.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/firstSpringAPP.iml" filepath="$PROJECT_DIR$/.idea/modules/firstSpringAPP.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/firstSpringAPP_main.iml" filepath="$PROJECT_DIR$/.idea/modules/firstSpringAPP_main.iml" group="firstSpringAPP" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/firstSpringAPP_test.iml" filepath="$PROJECT_DIR$/.idea/modules/firstSpringAPP_test.iml" group="firstSpringAPP" />
+    </modules>
+  </component>
+</project>
