@@ -1,0 +1,6 @@
+spring:
+  datasource:
+    url: jdbc:mysql://(DB ip address):3306/(DB Name)
+    username: (DB username)
+    password: (DB password)
+    driver-class-name: com.mysql.jdbc.Driver
