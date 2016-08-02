@@ -1,5 +1,6 @@
 package jp.ac.tama.service;
 
+import jp.ac.tama.model.InputUserResult;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -22,28 +23,28 @@ public class UserService {
     }
 
     @Transactional
-    public void addUser(){
-        String userName = "名無しの権兵衛";
-        String userId = "7745";
+    public void addUser(InputUserResult inputUserResult){
+        String userName = inputUserResult.getUserName();
+        String userId = inputUserResult.getUserId();
         val userEntity = new UserEntity(userId,userName);
         userRepository.save(userEntity);
     }
     @Transactional
-    public UserEntity getUser(){
-        String userId ="7745";
+    public UserEntity getUser(InputUserResult inputUserResult){
+        String userId = inputUserResult.getUserId();
         val userEntity = userRepository.findOne(userId);
         return userEntity;
     }
 
     @Transactional
-    public Boolean existUser(){
-        String userId = "7745";
+    public Boolean existUser(InputUserResult inputUserResult){
+        String userId = inputUserResult.getUserId();
         return userRepository.exists(userId);
     }
 
     @Transactional
-    public void deleteUser(){
-        String userId = "7745";
+    public void deleteUser(InputUserResult inputUserResult){
+        String userId = inputUserResult.getUserId();
         userRepository.delete(userId);
     }
 
