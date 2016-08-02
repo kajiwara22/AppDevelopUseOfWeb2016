@@ -38,6 +38,8 @@ dependencies {
 	compile "org.springframework.data:spring-data-mirage:0.3.3.RELEASE"
 	// https://mvnrepository.com/artifact/mysql/mysql-connector-java
 	compile group: 'mysql', name: 'mysql-connector-java', version: '5.1.6'
+	// Flayway
+	compile "org.flywaydb:flyway-core"
 }
 
 
