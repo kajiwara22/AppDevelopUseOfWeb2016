@@ -8,7 +8,7 @@ import org.springframework.data.mirage.repository.config.EnableMirageRepositorie
 import org.springframework.data.mirage.repository.support.MiragePersistenceExceptionTranslator;
 import org.springframework.jdbc.datasource.DataSourceTransactionManager;
 
-import jp.ac.tama.FirstSpringAppApplication;
+import jp.ac.tama.SecondSpringAppApplication;
 import jp.sf.amateras.mirage.SqlManagerImpl;
 import jp.sf.amateras.mirage.bean.BeanDescFactory;
 import jp.sf.amateras.mirage.bean.FieldPropertyExtractor;
@@ -21,7 +21,7 @@ import jp.sf.amateras.mirage.provider.ConnectionProvider;
  * Created by kajiwarayutaka on 2016/08/02.
  */
 @Configuration
-@EnableMirageRepositories(basePackageClasses = FirstSpringAppApplication.class,sqlManagerRef = "sqlManager")
+@EnableMirageRepositories(basePackageClasses = SecondSpringAppApplication.class,sqlManagerRef = "sqlManager")
 public class MirageConfigure {
     @Autowired
     DataSourceTransactionManager dataSourceTransactionManager;
