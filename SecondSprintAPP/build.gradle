@@ -4,6 +4,7 @@ buildscript {
 	}
 	repositories {
 		mavenCentral()
+		maven { url "http://maven.xet.jp/release" } // for spring-data-mirage
 	}
 	dependencies {
 		classpath("org.springframework.boot:spring-boot-gradle-plugin:${springBootVersion}")
@@ -23,6 +24,7 @@ targetCompatibility = 1.8
 
 repositories {
 	mavenCentral()
+	maven { url "http://maven.xet.jp/release" } // for spring-data-mirage
 }
 
 
@@ -32,6 +34,8 @@ dependencies {
 	compile('org.springframework.boot:spring-boot-starter-web')
 	runtime('mysql:mysql-connector-java')
 	testCompile('org.springframework.boot:spring-boot-starter-test')
+	// Spring Data mirage
+	compile "org.springframework.data:spring-data-mirage:0.3.3.RELEASE"
 }
 
 
