@@ -1,0 +1,1 @@
+SELECT count(*) FROM user where cast(user_id as unsigned) mod 3 = 0 or cast(user_id as unsigned) mod 5 = 0;

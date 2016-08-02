@@ -47,5 +47,10 @@ public class UserService {
         userRepository.delete(userId);
     }
 
+    @Transactional
+    public int getSekaiNoNabetsuneCount(){
+        return userRepository.findSekaiNoNabetsune();
+    }
+
 
 }
