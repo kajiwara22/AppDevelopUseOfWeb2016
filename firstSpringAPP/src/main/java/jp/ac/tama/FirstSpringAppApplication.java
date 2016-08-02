@@ -39,6 +39,8 @@ public class FirstSpringAppApplication  implements CommandLineRunner {
 		if(userService.existUser()){
 		    System.out.println(userService.getUser().toString());
 		}
+		System.out.println("ユーザーIdが３か５で割り切れるユーザー数を求めます。");
+		System.out.println(userService.getSekaiNoNabetsuneCount());
 
 		System.out.println("ユーザーを確認します。");
 		if(userService.existUser()){
