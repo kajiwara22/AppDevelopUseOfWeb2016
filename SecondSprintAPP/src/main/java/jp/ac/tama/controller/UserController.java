@@ -27,11 +27,6 @@ public class UserController {
         val user = new User(userId,"リクエストより生成されたユーザー");
         return user;
     }
-    @RequestMapping(value = "",method = RequestMethod.GET)
-    public Iterable<UserEntity> showUsers(){
-        val users = userService.getUsers();
-        return users;
-    }
 
     @RequestMapping(value = "add",method = RequestMethod.POST)
     public ResponseEntity createUser(@Validated @RequestBody User user, BindingResult bindingResult){
