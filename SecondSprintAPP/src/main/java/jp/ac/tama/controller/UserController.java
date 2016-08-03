@@ -38,7 +38,9 @@ public class UserController {
         if(bindingResult.hasErrors()){
             return new ResponseEntity(HttpStatus.BAD_REQUEST);
         }else{
-            return new ResponseEntity<String>(user.toString(),HttpStatus.CREATED);
+            val userEntity = new UserEntity(user.getId(),user.getName());
+            userService.addUser(userEntity);
+            return new ResponseEntity<String>("OK!!",HttpStatus.CREATED);
         }
 
     }

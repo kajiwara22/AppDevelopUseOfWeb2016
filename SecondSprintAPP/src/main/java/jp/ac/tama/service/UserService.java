@@ -22,10 +22,7 @@ public class UserService {
     }
 
     @Transactional
-    public void addUser(){
-        String userName = "名無しの権兵衛";
-        String userId = "7745";
-        val userEntity = new UserEntity(userId,userName);
+    public void addUser(UserEntity userEntity){
         userRepository.save(userEntity);
     }
     @Transactional
