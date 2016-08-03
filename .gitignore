@@ -66,11 +66,10 @@ fabric.properties
 ### Intellij Patch ###
 # Comment Reason: https://github.com/joeblau/gitignore.io/issues/186#issuecomment-215987721
 
-# *.iml
-# modules.xml
-# .idea/misc.xml 
-# *.ipr
-firstSpringAPP/.idea/*
+*.iml
+modules.xml
+.idea/misc.xml 
+*.ipr
 
 # Created by https://www.gitignore.io/api/gradle
 
@@ -89,3 +88,7 @@ gradle-app.setting
 
 # # Work around https://youtrack.jetbrains.com/issue/IDEA-116898
 # gradle/wrapper/gradle-wrapper.properties
+.idea/checkstyle-idea.xml
+.idea/compiler.xml
+.idea/encodings.xml
+.idea/copyright/profiles_settings.xml
