@@ -1,12 +1,13 @@
 package jp.ac.tama.service;
 
+import jp.ac.tama.entity.UserEntity;
+import jp.ac.tama.repository.UserRepository;
+import lombok.val;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
-import jp.ac.tama.entity.UserEntity;
-import jp.ac.tama.repository.UserRepository;
-import lombok.val;
+import java.util.List;
 
 /**
  * Created by kajiwarayutaka on 2016/08/02.
@@ -52,5 +53,11 @@ public class UserService {
         return userRepository.findSekaiNoNabetsune();
     }
 
+    @Transactional
+    public List<UserEntity> getFirstKAuser(){
+        return userRepository.findLikeQuery();
+    }
 
-}
+
+
+    }

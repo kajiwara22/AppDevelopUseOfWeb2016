@@ -22,6 +22,10 @@ public class FirstSpringAppApplication  implements CommandLineRunner {
 
 	@Override
 	public void run(String... args) throws Exception {
+
+		for (UserEntity user:userService.getFirstKAuser()) {
+			System.out.println(user.toString());
+		}
 		for (UserEntity user:userService.getUsers()) {
 			System.out.println(user.toString());
 		}
