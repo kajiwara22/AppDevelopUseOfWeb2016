@@ -1,13 +1,11 @@
 package jp.ac.tama.controller;
 
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RestController;
-
 import jp.ac.tama.entity.PrefectureInfo;
 import jp.ac.tama.service.PrefectureInfoService;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.*;
+
+import java.util.List;
 
 /**
  * Created by kajiwarayutaka on 2016/08/04.
@@ -17,6 +15,11 @@ import jp.ac.tama.service.PrefectureInfoService;
 public class PrefectureController {
     @Autowired
     private PrefectureInfoService prefectureInfoService;
+
+    @RequestMapping(value ="",method = RequestMethod.GET)
+    public List<PrefectureInfo> showLikePrefecture(@RequestParam("name") String prefectureLike){
+        return prefectureInfoService.findLikePrefecture(prefectureLike);
+    }
 
     @RequestMapping(value = "{id}",method = RequestMethod.GET)
     public PrefectureInfo showState(@PathVariable int id){

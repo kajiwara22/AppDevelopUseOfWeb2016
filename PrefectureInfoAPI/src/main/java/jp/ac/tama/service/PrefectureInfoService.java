@@ -32,4 +32,9 @@ public class PrefectureInfoService {
     public PrefectureInfo findOneState(int stateId){
         return prefectureInfoRepository.findOne(stateId);
     }
+
+    @Transactional
+    public List<PrefectureInfo> findLikePrefecture(String likePrefecture){
+        return prefectureInfoRepository.findByNameLikeParam(likePrefecture + "%");
+    }
 }

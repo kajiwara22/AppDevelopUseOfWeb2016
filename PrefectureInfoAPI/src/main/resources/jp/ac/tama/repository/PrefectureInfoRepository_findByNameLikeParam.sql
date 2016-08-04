@@ -1,0 +1,1 @@
+SELECT * FROM PrefectureInfo WHERE name LIKE /*prefecture_name*/
