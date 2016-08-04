@@ -1,0 +1,6 @@
+spring:
+  datasource:
+    url: jdbc:mysql://iss.edu.tama.ac.jp:3306/weatherStateDB?characterEncoding=UTF-8
+    username: weatherStateDB
+    password: M9TNPPVqKH4KdBx
+    driver-class-name: com.mysql.jdbc.Driver
