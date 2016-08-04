@@ -1,6 +1,6 @@
 <urf>
     <div class="row">
-        <form class="col s12" >
+        <form class="col s12" onSubmit={ register }>
             <div class="row">
                 <div class="input-field col s6">
                     <input id="user_id" type="text" class="validate">
@@ -36,6 +36,7 @@
                 return response.text();
             }).then(function(text) {
                 console.log(text);
+                riot.route('users')
             });
         }
 

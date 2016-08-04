@@ -16,7 +16,7 @@ var
 riot.router.routes([
     new Route({path: 'app',tag: 'app'}),
     new Route({path: 'users',tag: 'users'}),
-    new Route({path: 'urf',tag: 'urf'}),
+    new Route({path: 'add',tag: 'urf'}),
     new DefaultRoute({tag: 'users'}),
     new RedirectRoute({from: 'h', to: 'urf'}),
     new NotFoundRoute({tag: 'notfound'})
