@@ -22,6 +22,10 @@ public class UserController {
     @Autowired
     private UserService userService;
 
+    @RequestMapping(value = "rest",method = RequestMethod.GET)
+    public User showRestUser(){
+        return userService.getRestEntity();
+    }
     @RequestMapping(value = "{userId}",method = RequestMethod.GET)
     public User showUser(@PathVariable String userId){
         val user = new User(userId,"リクエストより生成されたユーザー");

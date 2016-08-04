@@ -23,4 +23,9 @@ public class UsersController {
         val users = userService.getUsers();
         return users;
     }
+
+    @RequestMapping(value = "rest",method = RequestMethod.GET)
+    public Iterable<UserEntity> showRestUsers(){
+        return userService.getRestArrayEntity();
+    }
 }
