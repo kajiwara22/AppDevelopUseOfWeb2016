@@ -4,9 +4,9 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class StateInfoApiApplication {
+public class PrefectureInfoApiApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(StateInfoApiApplication.class, args);
+		SpringApplication.run(PrefectureInfoApiApplication.class, args);
 	}
 }

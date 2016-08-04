@@ -1,6 +1,6 @@
 package jp.ac.tama.config;
 
-import jp.ac.tama.StateInfoApiApplication;
+import jp.ac.tama.PrefectureInfoApiApplication;
 import jp.sf.amateras.mirage.SqlManagerImpl;
 import jp.sf.amateras.mirage.bean.BeanDescFactory;
 import jp.sf.amateras.mirage.bean.FieldPropertyExtractor;
@@ -20,7 +20,7 @@ import org.springframework.jdbc.datasource.DataSourceTransactionManager;
  * Created by kajiwarayutaka on 2016/08/02.
  */
 @Configuration
-@EnableMirageRepositories(basePackageClasses = StateInfoApiApplication.class,sqlManagerRef = "sqlManager")
+@EnableMirageRepositories(basePackageClasses = PrefectureInfoApiApplication.class,sqlManagerRef = "sqlManager")
 public class MirageConfigure {
     @Autowired
     DataSourceTransactionManager dataSourceTransactionManager;

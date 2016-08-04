@@ -12,10 +12,10 @@ import lombok.Data;
  * Created by kajiwarayutaka on 2016/08/04.
  */
 @Data
-@Table(name="stateInfo")
+@Table(name="PrefectureInfo")
 @AllArgsConstructor
-public class StateInfo {
-    @Column(name = "StateId")
+public class PrefectureSimpleInfo {
+    @Column(name = "id")
     @Id
     @PrimaryKey(generationType = PrimaryKey.GenerationType.APPLICATION)
     private int stateId;
@@ -23,9 +23,4 @@ public class StateInfo {
     @Column(name = "name")
     private String name;
 
-    @Column(name = "lat")
-    private Double lat;
-
-    @Column(name = "lng")
-    private Double lng;
 }
