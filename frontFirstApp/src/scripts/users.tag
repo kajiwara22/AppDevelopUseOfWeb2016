@@ -4,16 +4,15 @@ require('./user.tag');
 <script>
     this.users = '( Loading... )'
     var self = this;
-    var child = this.tags;
-        fetch( 'http://localhost:8080/users' )
-        .then( function ( data ) {
-            return data.json();
-        } )
-        .then( function ( json ) {
-            console.log(json);
-            self.users = json;
-            self.update();
-        } )
+    fetch( 'http://localhost:8080/users' )
+            .then( function ( data ) {
+                return data.json();
+            } )
+            .then( function ( json ) {
+                console.log(json);
+                self.users = json;
+                self.update();
+            } )
 
 
 </script>
