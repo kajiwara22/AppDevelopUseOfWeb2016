@@ -1,6 +1,6 @@
-<userRegisterForm>
+<urf>
     <div class="row">
-        <form class="col s12" onsubmit={ register }>
+        <form class="col s12" >
             <div class="row">
                 <div class="input-field col s6">
                     <input id="user_id" type="text" class="validate">
@@ -17,7 +17,7 @@
         </form>
     </div>
     <script>
-        this.register = (e) =>{
+        this.register = function(e){
             const userId = this.user_id.value;
             const userName = this.user_name.value;
             e.preventDefault();
@@ -36,8 +36,8 @@
                 return response.text();
             }).then(function(text) {
                 console.log(text);
-            })
+            });
         }
 
     </script>
-</userRegisterForm>
+</urf>

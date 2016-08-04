@@ -29,6 +29,7 @@
   "dependencies": {
     "materialize-css": "^0.97.7",
     "riot": "^2.4.1",
+    "riot-router": "^0.8.0",
     "whatwg-fetch": "^1.0.0"
   }
 }

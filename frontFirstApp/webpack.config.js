@@ -35,6 +35,7 @@ module.exports = {
     new webpack.optimize.UglifyJsPlugin(),
     new webpack.ProvidePlugin({
       riot: 'riot',
+      'riot.router':'riot-router',
       'fetch': 'imports?this=>global!exports?global.fetch!whatwg-fetch'
     })
   ]
