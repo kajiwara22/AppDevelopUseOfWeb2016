@@ -18,7 +18,7 @@ public class PrefectureSimpleInfo {
     @Column(name = "id")
     @Id
     @PrimaryKey(generationType = PrimaryKey.GenerationType.APPLICATION)
-    private int stateId;
+    private int id;
 
     @Column(name = "name")
     private String name;

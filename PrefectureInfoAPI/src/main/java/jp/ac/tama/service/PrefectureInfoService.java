@@ -21,11 +21,11 @@ public class PrefectureInfoService {
 
     @Transactional
     public List<PrefectureSimpleInfo> findAllState(){
-        val  statesInfoes = new ArrayList<PrefectureSimpleInfo>();
-        for (PrefectureInfo stateinfo: prefectureInfoRepository.findAll()){
-            statesInfoes.add(new PrefectureSimpleInfo(stateinfo.getStateId(),stateinfo.getName()));
+        val  simpleInfos = new ArrayList<PrefectureSimpleInfo>();
+        for (PrefectureInfo prefectureInfo: prefectureInfoRepository.findAll()){
+            simpleInfos.add(new PrefectureSimpleInfo(prefectureInfo.getId(),prefectureInfo.getName()));
         }
-        return statesInfoes;
+        return simpleInfos;
     }
 
     @Transactional
