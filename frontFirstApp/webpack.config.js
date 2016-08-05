@@ -32,7 +32,6 @@ module.exports = {
       extensions: ['', '.js', '.tag']
   },
   plugins: [
-    new webpack.optimize.UglifyJsPlugin(),
     new webpack.ProvidePlugin({
       riot: 'riot',
       'riot.router':'riot-router',
