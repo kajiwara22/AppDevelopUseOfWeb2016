@@ -1,5 +1,5 @@
+require('./prefectureSelect.tag');
 <urf>
-    <div class="row">
         <form class="col s12" onSubmit={ register }>
             <div class="row">
                 <div class="input-field col s6">
@@ -11,11 +11,11 @@
                     <label for="user_name">UserName</label>
                 </div>
             </div>
+            <prefectureSelect></prefectureSelect>
             <div class="row">
                 <button class="waves-effect waves-light btn col s12">button</button>
             </div>
         </form>
-    </div>
     <script>
         this.register = function(e){
             const userId = this.user_id.value;
